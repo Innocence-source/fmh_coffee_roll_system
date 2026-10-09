@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html xmlns:th="https://www.thymeleaf.org" lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <link rel="stylesheet" href="./css/index.css" th:href="@{/static/css/index.css}" type="text/css">
+    <title>奇酷</title>
+</head>
+<body ontouchstart="">
+    <header class="header">奇酷-咖啡券申请</header>
+
+    <div class="container">
+        <textarea class="text" placeholder="请简单填写申请原因"></textarea>
+        <select class="select">
+            <option value="-1">请选择审核人</option>
+            <option value="张赵雨">张赵雨</option>
+            <option value="陈奎">陈奎</option>
+            <option value="马登月">马登月</option>
+            <option value="曹莉莉">曹莉莉</option>
+            <option value="王丹丹">王丹丹</option>
+        </select>
+        <button class="btn" onclick="location.href='./orderCoffee.html'">申请</button>
+    </div>
+
+    <footer class="footer">
+        <a href="./applyCoffee.html" class="apply active">申请咖啡券</a>
+        <a href="./orderCoffee.html" class="juan">我的咖啡券</a>
+    </footer>
+</body>
+</html>

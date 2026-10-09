@@ -1,0 +1,272 @@
+<!DOCTYPE html>
+<html xmlns:th="https://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <link rel="stylesheet" href="./css/index.css" th:href="@{/static/css/index.css}" type="text/css">
+    <script src="./js/qrcode.js" th:src="@{/static/js/qrcode.js}"></script>
+    <title>奇酷</title>
+</head>
+<body ontouchstart="">
+<header class="header">奇酷-我的咖啡券</header>
+
+<!-- 显示 二维码 -->
+<div class="mode-win" oncontextmenu="return false;">
+    <i class="close">关闭</i>
+    <div class="qrcode"></div>
+</div>
+
+<div class="container-list">
+	
+	<div class="coffee-item">
+        <a href="javascript:void(0)" class="active">全部</a>
+		<a href="javascript:void(0)">待审核券</a>
+		<a href="javascript:void(0)">可用券</a>
+		<a href="javascript:void(0)">已使用券</a>
+		<a href="javascript:void(0)">不可用券</a>
+	</div>
+
+    <!-- <div class="no-data">暂无数据</div> -->
+	
+	<!-- 新状态样式：彩色左边框 + 右上角状态徽章 -->
+	<div class="credit status-pending">
+	    <a href="javascript:void(0)" data-id="1">
+	        <span class="no">NO.000001</span>
+	        <div class="left">
+	            <dl>
+	                <dt>咖啡券</dt>
+	                <dd>2023/11/24 ~ 2023/12/01</dd>
+	            </dl>
+	        </div>
+	    </a>
+	    <div class="right"><span class="status-vertical">待审核</span></div>
+	</div>
+	
+	<div class="credit status-complete">
+	    <a href="javascript:void(0)"  data-id="2">
+	        <span class="no">NO.000002</span>
+	        <div class="left">
+	            <dl>
+	                <dt>咖啡券</dt>
+	                <dd>2023/11/24 ~ 2023/12/01</dd>
+	            </dl>
+	        </div>
+	    </a>
+	    <div class="right"><span class="status-vertical">已使用</span></div>
+	</div>
+	
+	<div class="credit status-rejected">
+	    <a href="javascript:void(0)"  data-id="3">
+	        <span class="no">NO.000003</span>
+	        <div class="left">
+	            <dl>
+	                <dt>咖啡券</dt>
+	                <dd>2023/11/24 ~ 2023/12/01</dd>
+	            </dl>
+	        </div>
+	    </a>
+	    <div class="right"><span class="status-vertical">不可用</span></div>
+	</div>
+	
+	<div class="credit status-resolve">
+	    <a href="javascript:void(0)"  data-id="4">
+	        <span class="no">NO.000004</span>
+	        <div class="left">
+	            <dl>
+	                <dt>咖啡券</dt>
+	                <dd>2023/11/24 ~ 2023/12/01</dd>
+	            </dl>
+	        </div>
+	        <div class="right"><span class="status-vertical">可使用</span></div>
+	    </a>
+	</div>
+	
+	<div class="credit status-resolve">
+	    <a href="javascript:void(0)"  data-id="5">
+	        <span class="no">NO.000005</span>
+	        <div class="left">
+	            <dl>
+	                <dt>咖啡券</dt>
+	                <dd>2023/11/24 ~ 2023/12/01</dd>
+	            </dl>
+	        </div>
+	        <div class="right"><span class="status-vertical">可使用</span></div>
+	    </a>
+	</div>
+	
+	<div class="credit status-resolve">
+	    <a href="javascript:void(0)"  data-id="6">
+	        <span class="no">NO.000006</span>
+	        <div class="left">
+	            <dl>
+	                <dt>咖啡券</dt>
+	                <dd>2023/11/24 ~ 2023/12/01</dd>
+	            </dl>
+	        </div>
+	        <div class="right"><span class="status-vertical">可使用</span></div>
+	    </a>
+	</div>
+	
+	<div class="credit status-resolve">
+	    <a href="javascript:void(0)"  data-id="7">
+	        <span class="no">NO.000007</span>
+	        <div class="left">
+	            <dl>
+	                <dt>咖啡券</dt>
+	                <dd>2023/11/24 ~ 2023/12/01</dd>
+	            </dl>
+	        </div>
+	        <div class="right"><span class="status-vertical">可使用</span></div>
+	    </a>
+	</div>
+    <div class="credit status-resolve">
+        <a href="javascript:void(0)" data-id="1">
+            <span class="no">NO.000001</span>
+            <div class="left">
+                <dl>
+                    <dt>咖啡券</dt>
+                    <dd>2023/11/24 ~ 2023/12/01</dd>
+                </dl>
+            </div>
+            <div class="right"><span class="status-vertical">可使用</span></div>
+        </a>
+    </div>
+
+    <div class="credit status-resolve">
+        <a href="javascript:void(0)"  data-id="2">
+            <span class="no">NO.000002</span>
+            <div class="left">
+                <dl>
+                    <dt>咖啡券</dt>
+                    <dd>2023/11/24 ~ 2023/12/01</dd>
+                </dl>
+            </div>
+            <div class="right"><span class="status-vertical">可使用</span></div>
+        </a>
+    </div>
+
+    <div class="credit status-resolve">
+        <a href="javascript:void(0)"  data-id="3">
+            <span class="no">NO.000003</span>
+            <div class="left">
+                <dl>
+                    <dt>咖啡券</dt>
+                    <dd>2023/11/24 ~ 2023/12/01</dd>
+                </dl>
+            </div>
+            <div class="right"><span class="status-vertical">可使用</span></div>
+        </a>
+    </div>
+
+    <div class="credit status-resolve">
+        <a href="javascript:void(0)"  data-id="4">
+            <span class="no">NO.000004</span>
+            <div class="left">
+                <dl>
+                    <dt>咖啡券</dt>
+                    <dd>2023/11/24 ~ 2023/12/01</dd>
+                </dl>
+            </div>
+            <div class="right"><span class="status-vertical">可使用</span></div>
+        </a>
+    </div>
+
+    <div class="credit status-resolve">
+        <a href="javascript:void(0)"  data-id="5">
+            <span class="no">NO.000005</span>
+            <div class="left">
+                <dl>
+                    <dt>咖啡券</dt>
+                    <dd>2023/11/24 ~ 2023/12/01</dd>
+                </dl>
+            </div>
+            <div class="right"><span class="status-vertical">可使用</span></div>
+        </a>
+    </div>
+
+    <div class="credit status-resolve">
+        <a href="javascript:void(0)"  data-id="6">
+            <span class="no">NO.000006</span>
+            <div class="left">
+                <dl>
+                    <dt>咖啡券</dt>
+                    <dd>2023/11/24 ~ 2023/12/01</dd>
+                </dl>
+            </div>
+            <div class="right"><span class="status-vertical">可使用</span></div>
+        </a>
+    </div>
+
+    <div class="credit status-resolve">
+        <a href="javascript:void(0)"  data-id="7">
+            <span class="no">NO.000007</span>
+            <div class="left">
+                <dl>
+                    <dt>咖啡券</dt>
+                    <dd>2023/11/24 ~ 2023/12/01</dd>
+                </dl>
+            </div>
+            <div class="right"><span class="status-vertical">可使用</span></div>
+        </a>
+    </div>
+</div>
+
+<footer class="footer">
+    <a href="./applyCoffee.html" class="apply">申请咖啡券</a>
+    <a href="./orderCoffee.html" class="juan active">我的咖啡券</a>
+</footer>
+
+<aside class="backtop"></aside>
+
+<script>
+    let coffeeList = document.querySelectorAll(".credit.status-resolve > a") ;
+
+    // 动态绑定事件（移除编号生成逻辑）
+    Array.from(coffeeList).forEach(coffeeA => {
+        coffeeA.addEventListener("click", function(event) {
+            // 获取 咖啡券的 ID
+            let cid = this.dataset.id ;
+            // 获取网络地址前缀
+            let qrcodeUrlPrefix = "[[ ${qrcodeUrlPrefix} ]]"
+            
+            document.querySelector(".mode-win").style.display = "block" ;
+			//new QRCode(document.querySelector(".qrcode"), location.href);
+            // 将 选中的 咖啡券 添加到 模态框
+            let divClone = this.parentNode.cloneNode(true);
+            divClone.style.margin = "100px auto" ;
+            divClone.style.width = "380px" ;
+            document.querySelector(".qrcode").before(divClone);
+
+			// 根据网络地址生成对应的 二维码 (示例代码，需要修改)
+            new QRCode(document.querySelector(".qrcode"), qrcodeUrlPrefix + "/orderQrcode.html?cid=" + cid)
+        })
+    })
+
+    document.querySelector(".mode-win .close").addEventListener("click", function(event){
+        document.querySelector(".mode-win").style.display = "none" ;
+        document.querySelector(".qrcode").innerHTML = "";
+        // 移除他前面的兄弟 
+        document.querySelector(".qrcode").previousElementSibling.remove();
+    })
+	
+	let backTop = document.querySelector(".backtop")
+	// 给 window  添加 一个 滚动事件 
+	window.addEventListener("scroll",  function(event) {
+		// 获取 滚动条的 垂直 隐去的偏移量 
+		if(this.pageYOffset >= 500) {
+			backTop.style.display = "block";
+		}else if (this.pageYOffset < 500){
+			backTop.style.display = "none";
+		}
+	});
+	
+	// 给 backTop 绑定单击事件 
+	backTop.addEventListener("click", function(event) {
+		// scrollTop 设置 它距离顶部位置
+		window.scrollTo({behavior: 'smooth' , top:0 }) ;
+	});
+
+</script>
+
+</body>
+</html>
